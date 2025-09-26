@@ -1,0 +1,69 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/FruitTrees",
+			"Entries": {
+				"{{ModId}}_Coconut_Sapling": {
+					"DisplayName": "Coconut",
+					"Seasons": [ "summer" ],
+					"Fruit": [{"Chance": 0.1, "ItemId": "(O)791"}, {"ItemId": "(O)88"}],
+					"Texture": "{{ModId}}/CoconutTree",
+					"TextureSpriteRow": 0
+				}
+      }
+    },
+		{
+				"Action": "EditData",
+				"Target": "Data/WildTrees",
+				"TargetField": [ "6", "ShakeItems" ],
+				"Entries": {
+						"{{ModId}}_Shake": {
+						"ItemId": "(O){{ModId}}_Coconut_Sapling",
+						"MinStack": 1,
+						"MaxStack": 1,
+						"Chance": 0.05
+						}
+				}
+		},
+		{
+				"Action": "EditData",
+				"Target": "Data/WildTrees",
+				"TargetField": [ "6", "ChopItems" ],
+				"Entries": {
+						"{{ModId}}_Chop": {
+						"ItemId": "(O){{ModId}}_Coconut_Sapling",
+						"MinStack": 1,
+						"MaxStack": 1,
+						"Chance": 0.15
+						}
+				}
+		},
+		{
+				"Action": "EditData",
+				"Target": "Data/WildTrees",
+				"TargetField": [ "9", "ShakeItems" ],
+				"Entries": {
+						"{{ModId}}_Shake": {
+						"ItemId": "(O){{ModId}}_Coconut_Sapling",
+						"MinStack": 1,
+						"MaxStack": 1,
+						"Chance": 0.05
+						}
+				}
+		},
+		{
+				"Action": "EditData",
+				"Target": "Data/WildTrees",
+				"TargetField": [ "9", "ChopItems" ],
+				"Entries": {
+						"{{ModId}}_Chop": {
+						"ItemId": "(O){{ModId}}_Coconut_Sapling",
+						"MinStack": 1,
+						"MaxStack": 1,
+						"Chance": 0.15
+						}
+				}
+		}
+  ]
+}

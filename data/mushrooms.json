@@ -1,0 +1,82 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Crops",
+      "Entries": {
+        "{{ModId}}_RedMushroom_Spores": {
+          "Seasons": ["spring", "summer", "fall"],
+          "DaysInPhase": [2, 1, 1, 1, 2],
+          "HarvestItemId": "420",
+          "Texture": "{{ModId}}/RedMushroom",
+          "SpriteIndex": 0,
+          "RegrowDays": -1,
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 1,
+          "ExtraHarvestChance": 0.1,
+          "HarvestMaxIncreasePerFarmingLevel": 0.1
+        },
+        "{{ModId}}_PurpleMushroom_Spores": {
+          "Seasons": ["spring", "summer", "fall", "winter"],
+          "DaysInPhase": [2, 1, 1, 1, 2],
+          "HarvestItemId": "422",
+          "Texture": "{{ModId}}/PurpleMushroom",
+          "SpriteIndex": 0,
+          "RegrowDays": -1,
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 1,
+          "ExtraHarvestChance": 0.1,
+          "HarvestMaxIncreasePerFarmingLevel": 0.1
+        },
+        "{{ModId}}_MagmaCap_Spores": {
+          "Seasons": ["spring", "summer", "fall"],
+          "DaysInPhase": [3, 4, 5, 4, 5],
+          "HarvestItemId": "851",
+          "Texture": "{{ModId}}/MagmaCap",
+          "SpriteIndex": 0,
+          "RegrowDays": -1,
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 1,
+          "ExtraHarvestChance": 0.1,
+          "HarvestMaxIncreasePerFarmingLevel": 0.1
+        },
+        "{{ModId}}_CommonMushroom_Spores": {
+          "Seasons": ["fall"],
+          "DaysInPhase": [2, 1, 1, 1, 2],
+          "HarvestItemId": "404",
+          "Texture": "{{ModId}}/CommonMushroom",
+          "SpriteIndex": 0,
+          "RegrowDays": -1,
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 1,
+          "ExtraHarvestChance": 0.1,
+          "HarvestMaxIncreasePerFarmingLevel": 0.1
+        },
+        "{{ModId}}_Chanterelle_Spores": {
+          "Seasons": ["fall"],
+          "DaysInPhase": [2, 2, 2, 2, 2],
+          "HarvestItemId": "281",
+          "Texture": "{{ModId}}/Chanterelle",
+          "SpriteIndex": 0,
+          "RegrowDays": -1,
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 1,
+          "ExtraHarvestChance": 0.1,
+          "HarvestMaxIncreasePerFarmingLevel": 0.1
+        },
+        "{{ModId}}_Morel_Spores": {
+          "Seasons": ["spring"],
+          "DaysInPhase": [2, 1, 1, 1, 2],
+          "HarvestItemId": "257",
+          "Texture": "{{ModId}}/Morel",
+          "SpriteIndex": 0,
+          "RegrowDays": -1,
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 1,
+          "ExtraHarvestChance": 0.1,
+          "HarvestMaxIncreasePerFarmingLevel": 0.1
+        }
+      }
+    }
+  ]
+}

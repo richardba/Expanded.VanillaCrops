@@ -1,0 +1,166 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "TargetField": ["(BC)25", "OutputRules"],
+      "Entries": {
+        "{{ModId}}WildHorseradishSeedMaker": {
+          "Id": "{{ModId}}WildHorseradishSeedMaker",
+          "Triggers": [
+            {
+              "Id": "OnDropInX",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "(O)16"
+            }
+          ],
+          "MinutesUntilReady": 15,
+          "OutputItem": [
+            {
+              "ItemId": "(O){{ModId}}_WildHorseradish_Seeds",
+              "MinStack": 1,
+              "MaxStack": 3,
+              "Condition": "RANDOM 0.70"
+            },
+            {
+              "ItemId":  "(O)495",
+              "MinStack": 1,
+              "MaxStack": 3,
+              "Condition": "RANDOM 0.27"
+            },
+            {
+              "ItemId": "(O)770",
+              "MinStack": 1,
+              "MaxStack": 3,
+              "Condition": "RANDOM 0.02"
+            },
+            {
+              "ItemId": "(O)499",
+              "MinStack": 1,
+              "MaxStack": 3,
+              "Condition": "RANDOM 0.01"
+            }
+          ]
+        },
+        "{{ModId}}SpiceBerrySeedMaker": {
+          "Id": "{{ModId}}SpiceBerrySeedMaker",
+          "Triggers": [
+            {
+              "Id": "OnDropInX",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "(O)396"
+            }
+          ],
+          "MinutesUntilReady": 15,
+          "OutputItem": [
+            {
+              "ItemId": "(O){{ModId}}_SpiceBerry_Seeds",
+              "MinStack": 1,
+              "MaxStack": 3,
+              "Condition": "RANDOM 0.70"
+            },
+            {
+              "ItemId":  "(O)496",
+              "MinStack": 1,
+              "MaxStack": 3,
+              "Condition": "RANDOM 0.27"
+            },
+            {
+              "ItemId": "(O)770",
+              "MinStack": 1,
+              "MaxStack": 3,
+              "Condition": "RANDOM 0.02"
+            },
+            {
+              "ItemId": "(O)499",
+              "MinStack": 1,
+              "MaxStack": 3,
+              "Condition": "RANDOM 0.01"
+            }
+          ]
+        },
+        "{{ModId}}CommonMushroomSeedMaker": {
+          "Id": "{{ModId}}CommonMushroomSeedMaker",
+          "Triggers": [
+            {
+              "Id": "OnDropInX",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "(O)404"
+            }
+          ],
+          "MinutesUntilReady": 15,
+          "OutputItem": [
+            {
+              "ItemId": "(O){{ModId}}_CommonMushroom_Spores",
+              "MinStack": 1,
+              "MaxStack": 3,
+              "Condition": "RANDOM 0.70"
+            },
+            {
+              "ItemId":  "(O)497",
+              "MinStack": 1,
+              "MaxStack": 3,
+              "Condition": "RANDOM 0.27"
+            },
+            {
+              "ItemId": "(O)770",
+              "MinStack": 1,
+              "MaxStack": 3,
+              "Condition": "RANDOM 0.02"
+            },
+            {
+              "ItemId": "(O)499",
+              "MinStack": 1,
+              "MaxStack": 3,
+              "Condition": "RANDOM 0.01"
+            }
+          ]
+        },
+        "{{ModId}}WinterRootSeedMaker": {
+          "Id": "{{ModId}}WinterRootSeedMaker",
+          "Triggers": [
+            {
+              "Id": "OnDropInX",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "(O)412"
+            }
+          ],
+          "MinutesUntilReady": 15,
+          "OutputItem": [
+            {
+              "ItemId": "(O){{ModId}}_WinterRoot_Seeds",
+              "MinStack": 1,
+              "MaxStack": 3,
+              "Condition": "RANDOM 0.70"
+            },
+            {
+              "ItemId":  "(O)498",
+              "MinStack": 1,
+              "MaxStack": 3,
+              "Condition": "RANDOM 0.27"
+            },
+            {
+              "ItemId": "(O)770",
+              "MinStack": 1,
+              "MaxStack": 3,
+              "Condition": "RANDOM 0.02"
+            },
+            {
+              "ItemId": "(O)499",
+              "MinStack": 1,
+              "MaxStack": 3,
+              "Condition": "RANDOM 0.01"
+            }
+          ]
+        }
+      },
+      "MoveEntries":
+        [
+          { "Id": "{{ModId}}WildHorseradishSeedMaker", "ToPosition": "Top" },
+          { "Id": "{{ModId}}SpiceBerrySeedMaker", "ToPosition": "Top" },
+          { "Id": "{{ModId}}CommonMushroomSeedMaker", "ToPosition": "Top" },
+          { "Id": "{{ModId}}WinterRootSeedMaker", "ToPosition": "Top" }
+        ]
+    }
+  ]
+}

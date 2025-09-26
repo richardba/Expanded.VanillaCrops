@@ -1,0 +1,75 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/FruitTrees",
+      "When": { "Enable Walnut Tree": true },
+			"Entries": {
+        "{{ModId}}_Walnut_Sapling": {
+					"DisplayName": "Walnut",
+					"Seasons": [ "summer" ],
+					"Fruit": [{"Chance": 0.1, "ItemId": "(O)73"}, {"Chance": 0.9, "ItemId": "(O){{ModId}}_Walnut"}],
+					"Texture": "{{ModId}}/WalnutTree",
+					"TextureSpriteRow": 0
+				}
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",      
+      "When": { "Enable Walnut Tree": true },
+      "Entries": {
+				"{{ModId}}_Walnut": {
+					"Name": "{{ModId}}_Walnut",
+					"Type": "Forage",
+					"Category": -81,
+					"SpriteIndex": 0,
+					"DisplayName": "Walnut",
+					"Description": "Not Golden, but a hearty hardy nut, yet crunchy and delicious inside.",
+					"Texture": "{{ModId}}/Walnut",
+					"Price": 80,
+					"Edibility": 15,
+					"Buffs": [{
+							"Id": "{{ModId}}_Walnut_Buff",
+							"CustomAttributes": {
+								"LuckLevel": 1,
+								"Speed": 1
+							},
+							"Duration": 45
+					}],
+					"ContextTags": [
+						"evc_fruittree_fruit",
+						"evc_rarity_common",
+						"evc_pack_essential",
+						"evc_shop_pierre",
+						"modid_evc.vanillacrops",
+						"non_vanilla_item",
+						"evc_season_summer",
+						"evc_walnut_tree",
+						"walnut_item"
+					]
+				},        
+				"{{ModId}}_Walnut_Sapling": {
+					"Name": "{{ModId}}_Walnut_Sapling",
+					"Type": "Basic",
+					"Category": -74,
+					"SpriteIndex": 0,
+					"DisplayName": "Walnut Sapling",
+					"Description": "Takes 28 days to produce a mature Walnut tree. Has a small chance to bear Golden Walnuts in the summer. Only grows if the 8 surrounding tiles are empty.",
+					"Texture": "{{ModId}}/WalnutSapling",
+					"Price": 20000,
+					"ContextTags": [
+						"evc_fruittree_sapling",
+						"evc_rarity_common",
+						"evc_pack_essential",
+						"evc_shop_pierre",
+						"modid_evc.vanillacrops",
+						"vanilla_item",
+						"evc_season_summer",
+						"evc_walnut_tree"
+					]
+        }
+      }
+    }
+  ]
+}

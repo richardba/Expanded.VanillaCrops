@@ -1,0 +1,263 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"Priority": "Default+2",
+			"TargetField": [
+				"Joja",
+				"Items"
+			],
+			"Entries": {
+				"{{ModId}}Spring": {
+					"Id": "{{ModId}}Spring",
+					"ItemId": "ALL_ITEMS (O)",
+					"Condition": "SEASON spring, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target evc_shop_pierre, ITEM_CONTEXT_TAG Target evc_season_spring, !ITEM_CONTEXT_TAG Target evc_shop_volcano",
+					"IgnoreShopPriceModifiers": true
+        },
+				"{{ModId}}Summer": {
+					"Id": "{{ModId}}Summer",
+					"ItemId": "ALL_ITEMS (O)",
+					"Condition": "SEASON summer, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target evc_shop_pierre, ITEM_CONTEXT_TAG Target evc_season_summer, !ITEM_CONTEXT_TAG Target evc_shop_volcano",
+					"IgnoreShopPriceModifiers": true
+        },
+        "{{ModId}}Winter": {
+					"Id": "{{ModId}}Winter",
+					"ItemId": "ALL_ITEMS (O)",
+					"Condition": "SEASON winter, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target evc_shop_pierre, ITEM_CONTEXT_TAG Target evc_season_winter, !ITEM_CONTEXT_TAG Target evc_shop_volcano",
+					"IgnoreShopPriceModifiers": true
+        },
+				"{{ModId}}Fall": {
+					"Id": "{{ModId}}Fall",
+					"ItemId": "ALL_ITEMS (O)",
+					"Condition": "SEASON fall, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target evc_shop_pierre, ITEM_CONTEXT_TAG Target evc_season_fall, !ITEM_CONTEXT_TAG Target evc_shop_volcano",
+					"IgnoreShopPriceModifiers": true
+        },
+				"{{ModId}}MagmaCap": {
+					"Id": "{{ModId}}MagmaCap",
+					"ItemId": "(O){{ModId}}_MagmaCap_Spores",
+					"Condition": "!SEASON winter, YEAR 2, PLAYER_FORAGING_LEVEL Current 5, PLAYER_VISITED_LOCATION Current IslandWest, PLAYER_VISITED_LOCATION Current IslandSouth",
+					"IgnoreShopPriceModifiers": true
+        },
+				"{{ModId}}GingerTube": {
+					"Id": "{{ModId}}GingerTube",
+					"ItemId": "(O){{ModId}}_Ginger_Seeds",
+					"Condition": "YEAR 2, PLAYER_FORAGING_LEVEL Current 5, PLAYER_VISITED_LOCATION Current IslandWest, PLAYER_VISITED_LOCATION Current IslandSouth",
+					"IgnoreShopPriceModifiers": true
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Priority": "Default+2",
+      "TargetField": [
+        "SeedShop",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}Spring": {
+          "Id": "{{ModId}}Spring",
+          "ItemId": "ALL_ITEMS (O)",
+          "Condition": "SEASON spring, YEAR 2",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target evc_shop_pierre, ITEM_CONTEXT_TAG Target evc_season_spring, !ITEM_CONTEXT_TAG Target evc_shop_volcano",
+          "IgnoreShopPriceModifiers": false,
+          "ApplyProfitMargins": true
+        },
+				"{{ModId}}Summer": {
+					"Id": "{{ModId}}Summer",
+					"ItemId": "ALL_ITEMS (O)",
+					"Condition": "SEASON summer, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target evc_shop_pierre, ITEM_CONTEXT_TAG Target evc_season_summer, !ITEM_CONTEXT_TAG Target evc_shop_volcano",
+          "IgnoreShopPriceModifiers": false,
+					"ApplyProfitMargins": true
+        },
+        "{{ModId}}Winter": {
+					"Id": "{{ModId}}Winter",
+					"ItemId": "ALL_ITEMS (O)",
+					"Condition": "SEASON winter, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target evc_shop_pierre, ITEM_CONTEXT_TAG Target evc_season_winter, !ITEM_CONTEXT_TAG Target evc_shop_volcano",
+          "IgnoreShopPriceModifiers": false,
+          "ApplyProfitMargins": true
+        },
+				"{{ModId}}Fall": {
+					"Id": "{{ModId}}Fall",
+					"ItemId": "ALL_ITEMS (O)",
+					"Condition": "SEASON fall, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target evc_shop_pierre, ITEM_CONTEXT_TAG Target evc_season_fall, !ITEM_CONTEXT_TAG Target evc_shop_volcano",
+          "IgnoreShopPriceModifiers": false,
+          "ApplyProfitMargins": true
+        },
+				"{{ModId}}MagmaCap": {
+					"Id": "{{ModId}}MagmaCap",
+					"ItemId": "(O){{ModId}}_MagmaCap_Spores",
+					"Condition": "!SEASON winter, YEAR 2, PLAYER_FORAGING_LEVEL Current 5, PLAYER_VISITED_LOCATION Current IslandWest, PLAYER_VISITED_LOCATION Current IslandSouth",
+          "IgnoreShopPriceModifiers": false,
+          "ApplyProfitMargins": true
+        },
+				"{{ModId}}GingerTube": {
+					"Id": "{{ModId}}GingerTube",
+					"ItemId": "(O){{ModId}}_Ginger_Seeds",
+					"Condition": "YEAR 2, PLAYER_FORAGING_LEVEL Current 5, PLAYER_VISITED_LOCATION Current IslandWest, PLAYER_VISITED_LOCATION Current IslandSouth",
+          "IgnoreShopPriceModifiers": false,
+          "ApplyProfitMargins": true
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Priority": "Default+2",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}Spring": {
+          "Id": "{{ModId}}Spring",
+          "ItemId": "ALL_ITEMS (O)",
+          "Condition": "SEASON spring, RANDOM 0.7 @addDailyLuck",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target evc_shop_traveler, ITEM_CONTEXT_TAG Target evc_season_spring",
+          "IgnoreShopPriceModifiers": false,
+          "ApplyProfitMargins": true,
+          "PriceModifiers": [
+              {
+                  "Modification": "Multiply",
+                  "RandomAmount": [ 0.5, 2, 3, 4, 5 ]
+              }
+          ]
+        },
+				"{{ModId}}Summer": {
+					"Id": "{{ModId}}Summer",
+					"ItemId": "ALL_ITEMS (O)",
+					"Condition": "SEASON summer, RANDOM 0.7 @addDailyLuck",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target evc_shop_traveler, ITEM_CONTEXT_TAG Target evc_season_summer",
+          "IgnoreShopPriceModifiers": false,
+					"ApplyProfitMargins": true,
+					"PriceModifiers": [
+						{
+							"Modification": "Multiply",
+							"RandomAmount": [ 0.5, 2, 3, 4, 5 ]
+						}
+					]
+        },
+        "{{ModId}}Winter": {
+					"Id": "{{ModId}}Winter",
+					"ItemId": "ALL_ITEMS (O)",
+					"Condition": "SEASON winter, RANDOM 0.7 @addDailyLuck",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target evc_shop_traveler, ITEM_CONTEXT_TAG Target evc_season_winter",
+          "IgnoreShopPriceModifiers": false,
+          "ApplyProfitMargins": true,
+          "PriceModifiers": [
+              {
+                  "Modification": "Multiply",
+                  "RandomAmount": [ 0.5, 2, 3, 4, 5 ]
+              }
+          ]
+        },
+				"{{ModId}}Fall": {
+					"Id": "{{ModId}}Fall",
+					"ItemId": "ALL_ITEMS (O)",
+					"Condition": "SEASON fall, RANDOM 0.7 @addDailyLuck",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target evc_shop_traveler, ITEM_CONTEXT_TAG Target evc_season_fall",
+          "IgnoreShopPriceModifiers": false,
+          "ApplyProfitMargins": true,
+          "PriceModifiers": [
+              {
+                  "Modification": "Multiply",
+                  "RandomAmount": [ 0.5, 2, 3, 4, 5 ]
+              }
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Priority": "Default+2",
+      "TargetField": [
+        "Sandy",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}Daffodil": {
+          "Id": "{{ModId}}Daffodil",
+          "ItemId": "(O){{ModId}}_Daffodil_Seeds",
+          "Condition": "SEASON spring, PLAYER_FRIENDSHIP_POINTS Current Sandy 750",
+          "PriceModifiers": [{
+              "Modification": "Set",
+              "RandomAmount": [ 6, 9, 12, 15 ]
+          }],
+          "IgnoreShopPriceModifiers": false,
+          "ApplyProfitMargins": true
+        },
+				"{{ModId}}Crocus": {
+					"Id": "{{ModId}}Crocus",
+					"ItemId": "(O){{ModId}}_Crocus_Seeds",
+					"Condition": "SEASON winter, PLAYER_FRIENDSHIP_POINTS Current Sandy 750",
+					"PriceModifiers": [{
+						"Modification": "Set",
+						"RandomAmount": [ 6, 9, 12, 15 ]
+					}],
+					"IgnoreShopPriceModifiers": false,
+					"ApplyProfitMargins": true
+        },
+        "{{ModId}}SweetPea": {
+					"Id": "{{ModId}}SweetPea",
+					"ItemId": "(O){{ModId}}_Sweet_Pea_Seeds",
+					"Condition": "SEASON summer, PLAYER_FRIENDSHIP_POINTS Current Sandy 750",
+					"PriceModifiers": [{
+						"Modification": "Set",
+						"RandomAmount": [ 6, 9, 12, 15 ]
+					}],
+					"IgnoreShopPriceModifiers": true,
+          "ApplyProfitMargins": false
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Priority": "Default+2",
+      "TargetField": [
+        "VolcanoShop",
+        "Items"
+      ],
+      "Entries": {
+				"{{ModId}}MagmaCap": {
+					"Id": "{{ModId}}MagmaCap",
+					"ItemId": "(O){{ModId}}_MagmaCap_Spores",
+          "Price": 50
+        },
+				"{{ModId}}GingerTube": {
+					"Id": "{{ModId}}GingerTube",
+					"ItemId": "(O){{ModId}}_Ginger_Seeds",
+          "Price": 25
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Priority": "Default+2",
+      "TargetField": [
+        "ShadowShop",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}Krobus": {
+          "Id": "{{ModId}}Krobus",
+          "ItemId": "(O){{ModId}}_WildHorseradish_Seeds",
+          "Condition": "SEASON spring",
+          "Price": 10,
+          "IgnoreShopPriceModifiers": true,
+          "ApplyProfitMargins": false
+        }
+      }
+    }
+  ]
+}

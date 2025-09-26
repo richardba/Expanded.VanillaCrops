@@ -1,0 +1,70 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+				"{{ModId}}_Stardrop_Seeds": {
+					"Name": "{{ModId}}_Stardrop_Seeds",
+					"Type": "Forage",
+					"Category": -74,
+					"SpriteIndex": 0,
+					"DisplayName": "Stardrop Seeds",
+					"Description": "Plant these in the summer. Takes an year to mature.",
+					"Texture": "{{ModId}}/Stardrop_Seeds",
+					"Price": 20000,
+					"ContextTags": [
+						"evc_stardrop_crop",
+						"evc_rarity_rare",
+						"evc_enable_stardrop_crops",
+						"modid_evc.vanillacrops",
+						"evc_season_summer"
+					]
+				}
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Crops",
+      "Entries": {
+        "{{ModId}}_Stardrop_Seeds": {
+          "Seasons": ["spring", "summer", "fall", "winter"],
+          "DaysInPhase": [ 28, 28, 28, 14, 14 ],
+          "HarvestItemId": "434",
+          "Texture": "{{ModId}}/Stardrop",
+          "SpriteIndex": 0,
+          "RegrowDays": 2000,
+          "Conditions": "SEASON summer",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 1,
+          "ExtraHarvestChance": 0,
+          "HarvestMaxIncreasePerFarmingLevel": 0
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Priority": "Default+2",
+      "TargetField": [
+        "SeedShop",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}Spring": {
+          "Id": "{{ModId}}Spring",
+          "ItemId": "(O){{ModId}}_Stardrop_Seeds",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_Stardrop_Seeds_Bought Received, SEASON summer, YEAR 5",
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "IgnoreShopPriceModifiers": true,
+          "ApplyProfitMargins": false,
+          "ActionsOnPurchase": [
+            "AddMail Current {{ModId}}_Stardrop_Seeds_Bought Received",
+            "spacechase0.SpaceCore_PlaySound questcomplete"
+          ]
+        }
+      }
+    }
+  ]
+}

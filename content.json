@@ -1,0 +1,111 @@
+{
+  "Format": "2.8.0",
+  	"ConfigSchema": {
+      //Rare Stardrop Crop
+      "Enable Stardrop Crop": {
+        "AllowValues": "true, false",
+        "Default": "false",
+        "Description": "Adds the Stardrop crop. It is a rare one year long crop that yields one Stardrop per harvest. It is limited to one per save."
+      },
+      "Enable Walnut Tree": {
+        "AllowValues": "true, false",
+        "Default": "true",
+        "Description": "Adds the Walnut tree. It is a new fruit tree that produces Walnuts in the summer and has a chance to yield a Golden Walnut."
+      }
+    },
+  	"DynamicTokens": [
+		{
+			"Name": "PLACEHOLDER",
+			"Value": "PLACEHOLDER"
+		}
+  ],
+  "Changes": [
+    {
+        "Action": "Load",
+        "Target": "{{ModId}}/CoconutTree",
+        "FromFile": "assets/{{TargetWithoutPath}}.png"
+    },
+    {
+        "Action": "Load",
+        "Target": "{{ModId}}/CoconutSapling",
+        "FromFile": "assets/{{TargetWithoutPath}}.png"
+    },
+    {
+        "Action": "Load",
+        "Target": "{{ModId}}/WalnutTree",
+        "FromFile": "assets/{{TargetWithoutPath}}.png"
+    },
+    {
+        "Action": "Load",
+        "Target": "{{ModId}}/WalnutSapling",
+        "FromFile": "assets/{{TargetWithoutPath}}.png"
+    },
+    { //Vegetables
+      "Action": "Load",
+      "Target": "{{ModId}}/Moss, {{ModId}}/CaveCarrot, {{ModId}}/Fiddlehead, {{ModId}}/Ginger, {{ModId}}/Leek, {{ModId}}/SpringOnion, {{ModId}}/WildHorseradish, {{ModId}}/WinterRoot",
+      "FromFile": "assets/{{TargetWithoutPath}}.png"
+    },
+    { //Trellis Crops 
+      "Action": "Load",
+      "Target": "{{ModId}}/Blackberry, {{ModId}}/Salmonberry, {{ModId}}/SnowYam, {{ModId}}/SpiceBerry, {{ModId}}/SweetPea",
+      "FromFile": "assets/{{TargetWithoutPath}}.png"
+    },
+    { //Mushrooms
+      "Action": "Load",
+      "Target": "{{ModId}}/RedMushroom, {{ModId}}/PurpleMushroom, {{ModId}}/MagmaCap, {{ModId}}/CommonMushroom, {{ModId}}/Chanterelle, {{ModId}}/Morel",
+      "FromFile": "assets/{{TargetWithoutPath}}.png"
+    },
+    { //Flowers
+      "Action": "Load",
+      "Target": "{{ModId}}/Dandelion, {{ModId}}/Daffodil, {{ModId}}/Crocus",
+      "FromFile": "assets/{{TargetWithoutPath}}.png"
+    },
+    { //Fruits/Nuts
+      "Action": "Load",
+      "Target": "{{ModId}}/Walnut, {{ModId}}/Plum, {{ModId}}/Holly, {{ModId}}/Hazelnut, {{ModId}}/Crystal",
+      "FromFile": "assets/{{TargetWithoutPath}}.png"
+    },
+    { //Seeds/Spores
+      "Action": "Load",
+      "Target": "{{ModId}}/Moss_Seeds, {{ModId}}/CaveCarrot_Seeds, {{ModId}}/Fiddlehead_Seeds, {{ModId}}/Ginger_Seeds, {{ModId}}/Leek_Seeds, {{ModId}}/SnowYam_Seeds, {{ModId}}/SpringOnion_Seeds, {{ModId}}/WildHorseradish_Seeds, {{ModId}}/WinterRoot_Seeds, {{ModId}}/Blackberry_Seeds, {{ModId}}/Salmonberry_Seeds, {{ModId}}/SpiceBerry_Seeds, {{ModId}}/SweetPea_Seeds, {{ModId}}/RedMushroom_Spores, {{ModId}}/PurpleMushroom_Spores, {{ModId}}/MagmaCap_Spores, {{ModId}}/CommonMushroom_Spores, {{ModId}}/Chanterelle_Spores, {{ModId}}/Morel_Spores, {{ModId}}/Plum_Seeds, {{ModId}}/Holly_Seeds, {{ModId}}/Hazelnut_Seeds, {{ModId}}/CrystalFruit_Seeds, {{ModId}}/Dandelion_Seeds, {{ModId}}/Daffodil_Seeds, {{ModId}}/Crocus_Seeds",
+      "FromFile": "assets/{{TargetWithoutPath}}.png"
+    },
+		{
+			"Action": "Include",
+			"FromFile": "data/coconuttree.json, data/walnuttree.json, data/vegetables.json, data/raised.json, data/mushrooms.json, data/flowers.json, data/fruits.json"
+		},
+		{
+			"Action": "Include",
+			"FromFile": "data/objects.json, data/shops.json, data/seedmaker.json"
+		},
+    {
+        "Action": "Load",
+        "When": { "Enable Stardrop Crop": true },
+        "Target": "{{ModId}}/Stardrop, {{ModId}}/Stardrop_Seeds",
+        "FromFile": "assets/{{TargetWithoutPath}}.png"
+    },
+    {
+        "Action": "Include",
+        "When": { "Enable Stardrop Crop": true },
+        "FromFile": "data/stardrop.json"
+    },
+    {
+      "LogName": "Stardrop Animated",
+      "Action": "EditData",
+      "Target": "spacechase0.SpaceCore/TextureOverrides",
+      "When": { "Enable Stardrop Crop": true },
+      "Entries": {
+        "{{ModId}}/StardropAnimated": {
+          "TargetTexture": "{{ModId}}/Stardrop_Seeds",
+          "TargetRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 16,
+            "Height": 16
+          },
+          "SourceTexture": "{{InternalAssetKey: assets/Stardrop_Seeds_Animated.png}}:0..4@10"
+        }
+      }
+    }
+  ]
+}
