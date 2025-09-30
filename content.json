@@ -1,7 +1,6 @@
 {
   "Format": "2.8.0",
   	"ConfigSchema": {
-      //Rare Stardrop Crop
       "Enable Stardrop Crop": {
         "AllowValues": "true, false",
         "Default": "false",
@@ -20,6 +19,11 @@
 		}
   ],
   "Changes": [
+    {
+      "Action": "Load",
+      "Target": "{{ModId}}/i18n",
+      "FromFile": "{{FirstValidFile: i18n/{{language}}.json, i18n/default.json }}"
+    },
     {
         "Action": "Load",
         "Target": "{{ModId}}/CoconutTree",
@@ -40,32 +44,32 @@
         "Target": "{{ModId}}/WalnutSapling",
         "FromFile": "assets/{{TargetWithoutPath}}.png"
     },
-    { //Vegetables
+    {
       "Action": "Load",
       "Target": "{{ModId}}/Moss, {{ModId}}/CaveCarrot, {{ModId}}/Fiddlehead, {{ModId}}/Ginger, {{ModId}}/Leek, {{ModId}}/SpringOnion, {{ModId}}/WildHorseradish, {{ModId}}/WinterRoot",
       "FromFile": "assets/{{TargetWithoutPath}}.png"
     },
-    { //Trellis Crops 
+    {
       "Action": "Load",
       "Target": "{{ModId}}/Blackberry, {{ModId}}/Salmonberry, {{ModId}}/SnowYam, {{ModId}}/SpiceBerry, {{ModId}}/SweetPea",
       "FromFile": "assets/{{TargetWithoutPath}}.png"
     },
-    { //Mushrooms
+    {
       "Action": "Load",
       "Target": "{{ModId}}/RedMushroom, {{ModId}}/PurpleMushroom, {{ModId}}/MagmaCap, {{ModId}}/CommonMushroom, {{ModId}}/Chanterelle, {{ModId}}/Morel",
       "FromFile": "assets/{{TargetWithoutPath}}.png"
     },
-    { //Flowers
+    {
       "Action": "Load",
       "Target": "{{ModId}}/Dandelion, {{ModId}}/Daffodil, {{ModId}}/Crocus",
       "FromFile": "assets/{{TargetWithoutPath}}.png"
     },
-    { //Fruits/Nuts
+    {
       "Action": "Load",
       "Target": "{{ModId}}/Walnut, {{ModId}}/Plum, {{ModId}}/Holly, {{ModId}}/Hazelnut, {{ModId}}/Crystal",
       "FromFile": "assets/{{TargetWithoutPath}}.png"
     },
-    { //Seeds/Spores
+    {
       "Action": "Load",
       "Target": "{{ModId}}/Moss_Seeds, {{ModId}}/CaveCarrot_Seeds, {{ModId}}/Fiddlehead_Seeds, {{ModId}}/Ginger_Seeds, {{ModId}}/Leek_Seeds, {{ModId}}/SnowYam_Seeds, {{ModId}}/SpringOnion_Seeds, {{ModId}}/WildHorseradish_Seeds, {{ModId}}/WinterRoot_Seeds, {{ModId}}/Blackberry_Seeds, {{ModId}}/Salmonberry_Seeds, {{ModId}}/SpiceBerry_Seeds, {{ModId}}/SweetPea_Seeds, {{ModId}}/RedMushroom_Spores, {{ModId}}/PurpleMushroom_Spores, {{ModId}}/MagmaCap_Spores, {{ModId}}/CommonMushroom_Spores, {{ModId}}/Chanterelle_Spores, {{ModId}}/Morel_Spores, {{ModId}}/Plum_Seeds, {{ModId}}/Holly_Seeds, {{ModId}}/Hazelnut_Seeds, {{ModId}}/CrystalFruit_Seeds, {{ModId}}/Dandelion_Seeds, {{ModId}}/Daffodil_Seeds, {{ModId}}/Crocus_Seeds",
       "FromFile": "assets/{{TargetWithoutPath}}.png"

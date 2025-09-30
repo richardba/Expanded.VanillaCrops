@@ -224,6 +224,41 @@
       "Target": "Data/Shops",
       "Priority": "Default+2",
       "TargetField": [
+        "IslandTrade",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}MagmaCap": {
+					"Id": "{{ModId}}MagmaCap",
+					"ItemId": "(O){{ModId}}_MagmaCap_Spores",
+          "TradeItemId": "(O)837",
+          "TradeItemAmount": 1
+        },
+				"{{ModId}}GingerTube": {
+					"Id": "{{ModId}}GingerTube",
+					"ItemId": "(O){{ModId}}_Ginger_Seeds",
+          "TradeItemId": "(O)838",
+          "TradeItemAmount": 1
+        },
+				"{{ModId}}Walnut_Sapling": {
+					"Id": "{{ModId}}Walnut_Sapling",
+					"ItemId": "(O){{ModId}}_Walnut_Sapling",
+          "TradeItemId": "(O)718",
+          "TradeItemAmount": 50
+        },
+        "{{ModId}}Coconut_Sapling": {
+					"Id": "{{ModId}}Coconut_Sapling",
+					"ItemId": "(O){{ModId}}_Coconut_Sapling",
+          "TradeItemId": "(O)88",
+          "TradeItemAmount": 5
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Priority": "Default+2",
+      "TargetField": [
         "VolcanoShop",
         "Items"
       ],

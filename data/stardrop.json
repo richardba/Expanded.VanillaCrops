@@ -9,8 +9,8 @@
 					"Type": "Forage",
 					"Category": -74,
 					"SpriteIndex": 0,
-					"DisplayName": "Stardrop Seeds",
-					"Description": "Plant these in the summer. Takes an year to mature.",
+					"DisplayName": "{{i18n:Stardrop_Seeds_Name}}",
+					"Description": "{{i18n:Stardrop_Seeds_Description}}",
 					"Texture": "{{ModId}}/Stardrop_Seeds",
 					"Price": 20000,
 					"ContextTags": [
